@@ -1,7 +1,9 @@
 import sqlite3
 import os
 
-DB_PATH = os.path.join("data", "tickets.db")
+BASE_DIR = Path(__file__).parent.parent
+# DB_PATH = os.path.join("data", "tickets.db")
+DB_PATH = BASE_DIR / "data" / "tickets.db"
 
 conn = sqlite3.connect(DB_PATH)
 cursor = conn.cursor()
