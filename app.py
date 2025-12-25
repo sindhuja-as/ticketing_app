@@ -7,7 +7,7 @@ from src.inference.predict import predict_and_route
 from db.db_utils import save_ticket
 
 # paths
-BASE_DIR = Path(__file__).parent.parent
+BASE_DIR = Path(__file__).resolve().parent
 # DATA_PATH = BASE_DIR / "data" / "predictions" / "ticket_predictions_new.csv"
 DB_PATH = BASE_DIR / "data" / "tickets.db"
 
