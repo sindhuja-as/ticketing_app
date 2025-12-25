@@ -5,7 +5,7 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 # DB_PATH = os.path.join("data", "tickets.db")
-DB_PATH = "ticketing_app\\data\\tickets.db"
+DB_PATH = "/home/ubuntu/ticketing_app/data/tickets.db"
 
 def save_ticket(data):
     conn = sqlite3.connect(DB_PATH)
