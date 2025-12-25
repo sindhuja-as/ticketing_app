@@ -101,7 +101,7 @@ elif st.session_state.page == "Dashboard":
         cursor = conn.cursor()
         cursor.execute("SELECT name FROM sqlite_master WHERE type='table'")
         print("Tables:", cursor.fetchall())
-        conn.close()
+        
         df = pd.read_sql("SELECT * FROM tickets", conn)
         conn.close()
 
