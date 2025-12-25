@@ -7,9 +7,9 @@ from src.inference.predict import predict_and_route
 from db.db_utils import save_ticket
 
 # paths
-# BASE_DIR = Path(__file__).resolve().parent
+BASE_DIR = Path(__file__).parent.parent
 # DATA_PATH = BASE_DIR / "data" / "predictions" / "ticket_predictions_new.csv"
-DB_PATH = Path("data/tickets.db")
+DB_PATH = BASE_DIR / "data" / "tickets.db"
 
 if "page" not in st.session_state:
     st.session_state.page = "Home"
@@ -92,7 +92,7 @@ elif st.session_state.page == "Dashboard":
     if not DB_PATH.exists():
         st.warning("Database not found. Initializing database...")
     else:
-        conn = sqlite3.connect("data\\tickets.db")
+        conn = sqlite3.connect("DB_PATH")
         df = pd.read_sql("SELECT * FROM tickets", conn)
         conn.close()
 
@@ -155,7 +155,7 @@ elif st.session_state.page == "Status":
 
         if ticket_id and DB_PATH.exists():
             
-            conn = sqlite3.connect("data\\tickets.db")
+            conn = sqlite3.connect("DB_PATH")
             df = pd.read_sql("SELECT * FROM tickets", conn)
             conn.close()
             match = df[df["ticket_id"] == ticket_id]
