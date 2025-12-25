@@ -93,8 +93,10 @@ elif st.session_state.page == "Dashboard":
         st.warning("Database not found. Initializing database...")
     else:
         conn = sqlite3.connect("DB_PATH")
-        st.write("DB PATH:", DB_PATH)
-        st.write("DB exists:", DB_PATH.exists())
+        
+        st.sidebar.write(f"App thinks DB is here: {DB_PATH.resolve()}")
+        st.sidebar.write(f"Does it actually exist? {DB_PATH.exists()}")
+
         
 
         
