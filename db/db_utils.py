@@ -3,7 +3,7 @@ from datetime import datetime
 import os
 from pathlib import Path
 
-BASE_DIR = Path(__file__).parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent
 # DB_PATH = os.path.join("data", "tickets.db")
 DB_PATH = BASE_DIR / "data" / "tickets.db"
 
