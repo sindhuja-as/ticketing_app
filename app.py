@@ -9,7 +9,7 @@ from db.db_utils import save_ticket
 # paths
 BASE_DIR = Path(__file__).resolve().parent
 # DATA_PATH = BASE_DIR / "data" / "predictions" / "ticket_predictions_new.csv"
-DB_PATH = "ticketing_app\\data\\tickets.db"
+DB_PATH = "/home/ubuntu/ticketing_app/data/tickets.db"
 
 if "page" not in st.session_state:
     st.session_state.page = "Home"
