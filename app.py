@@ -94,12 +94,6 @@ elif st.session_state.page == "Dashboard":
     else:
         conn = sqlite3.connect("DB_PATH")
         
-        st.sidebar.write(f"App thinks DB is here: {DB_PATH.resolve()}")
-        st.sidebar.write(f"Does it actually exist? {DB_PATH.exists()}")
-
-        
-
-        
         cursor = conn.cursor()
         cursor.execute("SELECT name FROM sqlite_master WHERE type='table'")
         print("Tables:", cursor.fetchall())
