@@ -9,7 +9,7 @@ import sqlite3
 # paths
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 MODEL_DIR = BASE_DIR / "models"
-DB_PATH = "ticketing_app\\data\\tickets.db"
+DB_PATH = "/home/ubuntu/ticketing_app/data/tickets.db"
 
 # load artifacts
 tfidf = joblib.load(MODEL_DIR / "tfidf_vectorizer_new2.pkl")
