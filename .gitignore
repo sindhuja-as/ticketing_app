@@ -1,0 +1,17 @@
+# virtual environment
+venv/
+.env
+
+# databases
+*.db
+
+# cache
+__pycache__/
+*.pyc
+
+# data files (optional)
+data/
+predictions/
+
+# OS files
+.DS_Store
