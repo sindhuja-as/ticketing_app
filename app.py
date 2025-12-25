@@ -95,6 +95,13 @@ elif st.session_state.page == "Dashboard":
         conn = sqlite3.connect("DB_PATH")
         st.write("DB PATH:", DB_PATH)
         st.write("DB exists:", DB_PATH.exists())
+        
+
+        
+        cursor = conn.cursor()
+        cursor.execute("SELECT name FROM sqlite_master WHERE type='table'")
+        print("Tables:", cursor.fetchall())
+        conn.close()
         df = pd.read_sql("SELECT * FROM tickets", conn)
         conn.close()
 
