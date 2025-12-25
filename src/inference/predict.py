@@ -7,7 +7,7 @@ import os
 import sqlite3
 
 # paths
-BASE_DIR = Path(__file__).resolve().parents[2]
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
 MODEL_DIR = BASE_DIR / "models"
 DB_PATH = BASE_DIR / "data" / "tickets.db"
 
