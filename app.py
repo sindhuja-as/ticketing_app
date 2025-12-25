@@ -89,7 +89,7 @@ if st.session_state.page == "Home":
 elif st.session_state.page == "Dashboard":
     st.title("Ticket Dashboard")
 
-    if not DB_PATH.exists():
+    if not DB_PATH:
         st.warning("Database not found. Initializing database...")
     else:
         conn = sqlite3.connect("DB_PATH")
