@@ -1,5 +1,6 @@
 import sqlite3
 import os
+from pathlib import Path
 
 BASE_DIR = Path(__file__).parent.parent
 # DB_PATH = os.path.join("data", "tickets.db")
