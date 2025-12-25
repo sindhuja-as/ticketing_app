@@ -2,7 +2,9 @@ import sqlite3
 from datetime import datetime
 import os
 
-DB_PATH = os.path.join("data", "tickets.db")
+BASE_DIR = Path(__file__).parent.parent
+# DB_PATH = os.path.join("data", "tickets.db")
+DB_PATH = BASE_DIR / "data" / "tickets.db"
 
 def save_ticket(data):
     conn = sqlite3.connect(DB_PATH)
