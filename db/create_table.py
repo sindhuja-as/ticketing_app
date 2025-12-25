@@ -4,7 +4,7 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 # DB_PATH = os.path.join("data", "tickets.db")
-DB_PATH = BASE_DIR \\ "data" \\ "tickets.db"
+DB_PATH = "ticketing_app\\data\\tickets.db"
 DB_PATH.parent.mkdir(parents=True, exist_ok=True)
 
 conn = sqlite3.connect(DB_PATH)
